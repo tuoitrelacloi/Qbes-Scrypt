@@ -25,3 +25,8 @@ sudo apt-get install -y python3-yaml
 sudo apt-get install -y python3-dev
 sudo apt-get install -y python-yaml
 
+#5. install Docker
+sudo apt-get install curl
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+
