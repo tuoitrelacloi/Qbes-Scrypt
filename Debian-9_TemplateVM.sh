@@ -30,3 +30,9 @@ sudo apt-get install curl
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 
+#First, disable docker in the template with sudo systemctl disable docker
+#Second, add a line in /rw/config/rc.local from you Appvm : dockerd --data-root /home/user/docker
+#With that docker will start as daemon with precise indication where to store the images.
+#It's easier, efficient and it's the way to go i think in place of modifying a template.
+
+# I can't apply that way, so I coppy debian templateVM to a new alone templateVM and install Docker there
